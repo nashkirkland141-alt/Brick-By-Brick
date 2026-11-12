@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11110f">
+  <title>BRICKYARD — Build the wall</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="wordmark" href="#"><span class="mark">B</span> BRICKYARD<span class="dot">.</span></a>
+    <div class="top-note"><span class="live-dot"></span> THE WALL IS OPEN</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="kicker">A COMMUNITY BUILT ONE BRICK AT A TIME</div>
+      <h1>PUT YOUR<br><em>BRICK</em> ON IT.</h1>
+      <p class="intro">Pick it up. Spin it around. Leave your mark.<br>This wall gets bigger every time someone chips in.</p>
+    </section>
+
+    <section class="workspace">
+      <div class="scene-card">
+        <div class="scene-head">
+          <div><span class="micro">01 / THE OBJECT</span><strong>One solid brick.</strong></div>
+          <span class="drag-label">DRAG TO MOVE · DRAG EMPTY SPACE TO ORBIT</span>
+        </div>
+        <div id="viewport" aria-label="Interactive 3D brick viewer">
+          <div class="loading" id="loading">BUILDING THE SCENE…</div>
+          <div class="scene-crosshair">✳</div>
+        </div>
+        <div class="scene-controls">
+          <button class="tool-btn" id="spinLeft" aria-label="Rotate left">↶ <span>LEFT</span></button>
+          <button class="tool-btn" id="spinRight" aria-label="Rotate right">↷ <span>RIGHT</span></button>
+          <button class="tool-btn" id="tiltUp" aria-label="Tilt up">↑ <span>TILT</span></button>
+          <button class="tool-btn" id="tiltDown" aria-label="Tilt down">↓ <span>TILT</span></button>
+          <button class="tool-btn reset" id="reset">RESET VIEW</button>
+        </div>
+        <div class="scene-foot"><span>3D OBJECT · REAL GEOMETRY</span><span>MADE TO BE MOVED</span></div>
+      </div>
+
+      <aside class="support-card">
+        <div class="support-top"><span class="micro">02 / MAKE IT COUNT</span><span class="asterisk">✳</span></div>
+        <h2>ADD A<br>BRICK.</h2>
+        <p class="support-copy">Every contribution helps build the wall. Choose what you want to put in.</p>
+
+        <label class="field-label" for="amount">YOUR CONTRIBUTION</label>
+        <div class="amount-box"><span>$</span><input id="amount" type="number" min="1" max="500" step="1" value="5" inputmode="numeric"><small>USD</small></div>
+        <div class="amounts">
+          <button data-amount="1">$1</button><button class="selected" data-amount="5">$5</button>
+          <button data-amount="10">$10</button><button data-amount="25">$25</button>
+          <button data-amount="50">$50</button><button data-amount="100">$100</button>
+        </div>
+        <label class="field-label" for="name">NAME ON YOUR BRICK <span>(OPTIONAL)</span></label>
+        <input class="name-input" id="name" maxlength="32" placeholder="What should we call you?">
+        <button class="contribute" id="contribute"><span>ADD MY BRICK</span><b id="buttonAmount">$5</b></button>
+        <p class="payment-note">Secure payments need a payment provider. This preview does not charge money.</p>
+        <div class="wall-stats">
+          <div><strong id="total">$0</strong><span>RAISED IN THIS DEMO</span></div>
+          <div><strong id="count">0</strong><span>CONTRIBUTIONS</span></div>
+        </div>
+        <div class="message" id="message" role="status"></div>
+      </aside>
+    </section>
+    <footer><span>BRICKYARD © 2026</span><span>NO SHORTCUTS. JUST BRICKS.</span></footer>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
